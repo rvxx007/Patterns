@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body { background: #ddf093; 
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                float: left;
+                overflow: visible;
+            }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+           border-radius: 20px;
+           background-color:#ce4760 ;
+           margin: auto;
+           z-index: 5;
+           filter: drop-shadow(0px 0px 5px #ddf093);
+            box-shadow: 0px 0px 1.8px rgb(255, 255, 255);
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+           border-radius: 20px;
+           background-color:#ce4760 ;
+           margin: auto;
+           margin-left: -140px;
+           z-index: 10;
+           border: 13px solid #ddf093;
+           transform: translatey(65px);
+            display: flex;
+            align-items: center;
+            filter: drop-shadow(0px 0px 5px #ddf093);
+            box-shadow: 0px 0px 1.8px rgb(255, 255, 255);
+
+        }
+
+        .row{
+            width: 100%;
+            height: 30%;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            margin-left: -5px;
+            transform: rotate(43deg) ;
+            
+        }
+
+        .row>span:first-child{
+            width: 50px;
+            height: 50px;
+            background-color: #ddf093;
+            margin: auto;
+            border-radius: 50px;
+            animation: color-change1 5s infinite alternate;
+        }
+
+        .row>span:nth-child(2){
+            width: 50px;
+            height: 50px;
+            background-color: #ddf093;
+            margin: auto;
+            border-radius: 50px;
+            animation: color-change2 5s infinite alternate;
+
+        }
+
+        .row>span:last-child{
+            width: 50px;
+            height: 50px;
+            background-color: #ddf093;
+            margin: auto;
+            border-radius: 50px;
+            animation: color-change3 5s infinite alternate;
+
+        }
+
+
+        @keyframes color-change1{
+            0%{
+                background-color: #ddf093;
+                filter: drop-shadow(0px 0px 10px #ddf093);
+            }
+            50%{background-color: orangered; 
+                filter: drop-shadow(0px 0px 10px orangered);
+            }
+            100%{background-color: green;
+                filter: drop-shadow(0px 0px 10px green);
+            }
+        }
+
+        @keyframes color-change2{
+            0%{
+                background-color: #ddf093;
+                filter: drop-shadow(0px 0px 10px #ddf093);
+
+            }
+            50%{background-color: white;
+                filter: drop-shadow(0px 0px 10px white);
+            
+            }
+            100%{background-color: #ddf093;
+                filter: drop-shadow(0px 0px 10px #ddf093);
+            
+            }
+        }
+
+        @keyframes color-change3{
+            0%{
+                background-color: #ddf093;
+                filter: drop-shadow(0px 0px 10px #ddf093);
+
+            }
+            50%{background-color: green;
+                filter: drop-shadow(0px 0px 10px green);
+            
+            }
+            100%{background-color: orangered;
+                filter: drop-shadow(0px 0px 10px orangered);
+            }
+        }
+
+        </style>
+        <div class="container">
+            <div class="box1">
+           
+            </div>
+            <div class="box2">
+               <span class="row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </span>
+            </div>
+        </div>
+        
+</body>
+</html>
